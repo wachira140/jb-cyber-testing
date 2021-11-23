@@ -166,6 +166,9 @@ const url = "https://cyber-api-v1.herokuapp.com/api/v1"
         dispatch({type:SET_LOGIN_DETAILS, payload:{ name, value}})
     }
 
+
+
+    
     const loginUser = async(e)=>{
         e.preventDefault()
 
@@ -175,8 +178,8 @@ const url = "https://cyber-api-v1.herokuapp.com/api/v1"
         const { email, password } = state.login
         const user = {email, password}
         try {
-            await axios.post(`${url}/auth/login`, user,{ withCredentials: true})
-            // showUser()
+            await axios.post(`${url}/auth/login`, user)
+            
             dispatch({type:LOGIN_USER_SUCCESS})
         } catch (error) {
             dispatch({type:LOGIN_USER_ERROR})
