@@ -178,7 +178,7 @@ const url = "https://cyber-api-v1.herokuapp.com/api/v1"
         const { email, password } = state.login
         const user = {email, password}
         try {
-            await axios.post(`${url}/auth/login`, user)
+            await axios.post(`/api/v1/auth/login`, user)
             
             dispatch({type:LOGIN_USER_SUCCESS})
         } catch (error) {
