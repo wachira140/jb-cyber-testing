@@ -21,7 +21,7 @@ const Login = () => {
     const { email, password } = login
 
 
-if(user.login_Status){
+if(user.login_Success){
     return <Redirect to ='/' />
 }
 

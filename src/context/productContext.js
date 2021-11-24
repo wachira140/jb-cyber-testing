@@ -31,7 +31,7 @@ category:[],
 
 }
 
-const url = "https://cyber-api-v1.herokuapp.com/api/v1"
+// const url = "https://cyber-api-v1.herokuapp.com/api/v1"
 // const url ="/api/v1"
 
 const productContext = React.createContext()
@@ -58,7 +58,7 @@ const [isLocation, setLocation ] = useState({})
 const fetchMainProducts = async ()=>{
   dispatch({type:GET_PRODUCTS_BEGIN})
   try {
-    const response = await axios.get(`${url}/products`);
+    const response = await axios.get(`api/v1/products`);
     const products = response.data.products
     dispatch({type:GET_PRODUCTS, payload:products})
     
@@ -72,7 +72,7 @@ const fetchMainProducts = async ()=>{
 const fetchSingleProducts = async (id)=>{
   dispatch({type:GET_SINGLE_PRODUCTS_BEGIN})
   try {
-    const response = await axios.get(`${url}/products/${id}`);
+    const response = await axios.get(`api/v1/products/${id}`);
      const product = response.data.product
     dispatch({type: GET_SINGLE_PRODUCT, payload:product})
     

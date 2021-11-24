@@ -105,7 +105,7 @@ const initialState = {
 
 const authContext = React.createContext()
 
-const url = "https://cyber-api-v1.herokuapp.com/api/v1"
+// const url = "https://cyber-api-v1.herokuapp.com/api/v1"
 // const url = "/api/v1"
 
  export const AuthProvider = ({children}) => {
@@ -129,7 +129,7 @@ const url = "https://cyber-api-v1.herokuapp.com/api/v1"
         const { name, email, password } = state.register
         const user = { name, email, password}
         try {
-           const response =  await axios.post(`${url}/auth/register`,user)
+           const response =  await axios.post(`api/v1/auth/register`,user)
             const {data, status} = await response
 
                 if(status === 201){
@@ -147,7 +147,7 @@ const url = "https://cyber-api-v1.herokuapp.com/api/v1"
         dispatch({type:LOAD_ON_VERIFY})
     try {
 
-        await axios.post(`${url}/auth/verify-email`,{
+        await axios.post(`api/v1/auth/verify-email`,{
             verificationToken: query.get('token'),
             email: query.get('email'),
         })
@@ -200,7 +200,7 @@ const resetPassword = async(e)=>{
 
     const email = state.reset.email
     try {
-        const { data } = await axios.post(`${url}/auth/forgot-password`,{email} )
+        const { data } = await axios.post(`api/v1/auth/forgot-password`,{email} )
         dispatch({ type:FORGOT_PASSWORD_SUCCESS, payload: data.msg})
     } catch (error) {
         
@@ -219,7 +219,7 @@ const resetP = async(query)=>{
     dispatch({type:NEW_PASSWORD_START})
 
     try {
-             await axios.post(`${url}/auth/reset-password`,{
+             await axios.post(`api/v1/auth/reset-password`,{
                 token:query.get('token'),
                 email:query.get('email'),
                 password:state.password
@@ -240,7 +240,7 @@ const  logOut = async()=>{
 
     try {
 
-    await axios.delete(`${url}/auth/logout`)
+    await axios.delete(`api/v1/auth/logout`)
         // showUser()
         dispatch({type: LOGOUT_SUCCESS})
     } catch (error) {
@@ -279,7 +279,7 @@ const resetForgotDetails = ()=>{
   const showUser = async ()=>{
       dispatch({type:SET_USER_START})
   try {
-    const response = await axios.get(`${url}/users/showUser`);
+    const response = await axios.get(`api/v1/users/showUser`);
     const data = response.data.user
     dispatch({type:SET_USER, payload:data})
   } catch (error) {

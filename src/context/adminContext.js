@@ -137,7 +137,7 @@ const initialState = {
 
 }
 
-const url = "https://cyber-api-v1.herokuapp.com/api/v1"
+// const url = "https://cyber-api-v1.herokuapp.com/api/v1"
 // const url ="/api/v1"
 
 const adminContext = React.createContext()
@@ -163,7 +163,7 @@ const closeSidebar = ()=>{
   const fetchProducts = async ()=>{
   dispatch({type:DASHBOARD_PRODUCTS_START})
   try {
-    const response = await axios.get(`${url}/products`);
+    const response = await axios.get(`api/v1/products`);
     const products = response.data.products
     dispatch({type:DASHBOARD_PRODUCTS_SUCCESS, payload:products})
     
@@ -182,7 +182,7 @@ const deleteProduct = async(id)=>{
     dispatch({type: DELETE_PRODUCT_START})
 
     try {
-            await axios.delete(`${url}/products/${id}`)
+            await axios.delete(`api/v1/products/${id}`)
            fetchProducts()
         dispatch({type: DELETE_PRODUCT_SUCCESS})
     } catch (error) {
@@ -215,7 +215,7 @@ const  addItem = async (e)=>{
 
     
     try {
-    const {data:{image:{src, public_id}}} = await axios.post(`${url}/products/uploads`,imageData)
+    const {data:{image:{src, public_id}}} = await axios.post(`api/v1/products/uploads`,imageData)
     dispatch({type:SET_PRODUCT, payload:{value:{src, public_id} }})
   
   } catch (error) {

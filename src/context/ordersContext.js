@@ -100,7 +100,7 @@ const initialState = {
 
 const ordersContext = React.createContext()
 
-const url = "https://cyber-api-v1.herokuapp.com/api/v1"
+// const url = "https://cyber-api-v1.herokuapp.com/api/v1"
 // const url = "/api/v1"
 
  export const OrdersProvider = ({children}) => {
@@ -154,7 +154,7 @@ const submitOrder = async()=>{
             };
             
             try {
-                const response = await axios.post(`${url}/orders`, orderDetails)
+                const response = await axios.post(`api/v1/orders`, orderDetails)
                 const{ _id } = response.data.order
                 currentOrders()
                 dispatch({type:SUBMIT_ORDER_SUCCESS, payload:_id})
@@ -171,7 +171,7 @@ const submitOrder = async()=>{
         dispatch({type:GET_ALL_ORDERS})
 
         try {
-                const response = await axios.get(`${url}/orders`)
+                const response = await axios.get(`api/v1/orders`)
                 const { data }= response
                 dispatch({type:GET_ALL_ORDERS_SUCCESS, payload:data})
         } catch (error) {
@@ -186,7 +186,7 @@ const submitOrder = async()=>{
 const currentOrders = async()=>{
     dispatch({type:CURRENT_ORDERS_START})
     try {
-        const response = await axios.get(`${url}/orders/showUsersOrders`)
+        const response = await axios.get(`api/v1/orders/showUsersOrders`)
         
         const {orders} = response.data
             dispatch({type:CURRENT_ORDERS_SUCCESS,payload:orders})
@@ -210,7 +210,7 @@ const currentOrders = async()=>{
         dispatch({type:SINGLE_ORDER_START})
         
         try {
-            const response = await axios.get(`${url}/orders/${id}`)
+            const response = await axios.get(`api/v1/orders/${id}`)
             const { order } = response.data
             
             dispatch({type:SINGLE_ORDER_SUCCESS, payload: order})
@@ -223,7 +223,7 @@ const currentOrders = async()=>{
         dispatch({type:DELETE_ORDER_START})
         
         try {
-            await axios.delete(`${url}/orders/${id}`)
+            await axios.delete(`api/v1/orders/${id}`)
             currentOrders()
             getOrders()
             dispatch({type:DELETE_ORDER_SUCCESS})
@@ -257,7 +257,7 @@ const currentOrders = async()=>{
         
         try {
             
-            await axios.post(`${url}/mpesa/lipaNaMpesa`, {phoneNumber, orderId})
+            await axios.post(`api/v1/mpesa/lipaNaMpesa`, {phoneNumber, orderId})
             dispatch({type:PAY_MPESA_SUCCESS})
         } catch (error) {
             dispatch({type:PAY_MPESA_ERROR})
