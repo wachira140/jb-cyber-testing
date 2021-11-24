@@ -278,7 +278,7 @@ const handleSubmit = async (e)=>{
                 image,
                 image_id
                    }
-             await axios.post(`${url}/products`, product)
+             await axios.post(`api/v1/products`, product)
                    fetchProducts()
         dispatch({type:SUBMIT_SUCCESS})
   } catch (error) {
@@ -322,7 +322,7 @@ const setEditValues = async (e)=>{
     
   try {
     // *************upload image if changed
-    const {data:{image:{src, public_id}}} = await axios.post(`${url}/products/uploads`,imageData)
+    const {data:{image:{src, public_id}}} = await axios.post(`api/v1/products/uploads`,imageData)
     dispatch({type:SET_EDIT_PRODUCT, payload:{value:{src, public_id} }})
   
   } catch (error) {
@@ -375,7 +375,7 @@ dispatch({type:EDIT_SUBMIT_START})
                    }
 
         
-        await axios.patch(`${url}/products/${_id}`, product)
+        await axios.patch(`api/v1/products/${_id}`, product)
         fetchProducts()
        dispatch({type:EDIT_SUBMIT_SUCCESS})
   } catch (error) {
@@ -389,7 +389,7 @@ const getPayments = async()=>{
   dispatch({type:GET_PAYMENTS_START})
 
   try {
-      const { data } = await axios.get(`${url}/payments`)
+      const { data } = await axios.get(`api/v1/payments`)
       dispatch({type:GET_PAYMENTS_SUCCESS, payload:data})
       
   } catch (error) {
@@ -405,7 +405,7 @@ const delete_Payment = async(id)=>{
 
   try {
     
-    await axios.delete(`${url}/payments/${id}`)
+    await axios.delete(`api/v1/payments/${id}`)
     getPayments()
     dispatch({type: DELETE_PAYMENT_SUCCESS})
   } catch (error) {
@@ -457,7 +457,7 @@ const getUsers = async()=>{
   dispatch({type:GET_USERS_START})
 
   try {
-      const { data } = await axios.get(`${url}/users`)
+      const { data } = await axios.get(`api/v1/users`)
 
       dispatch({type: GET_USERS_SUCCESS, payload:data.users})
   } catch (error) {
@@ -472,8 +472,8 @@ const getUsers = async()=>{
 const  getSingleUser = async(id)=>{
   dispatch({type:GET_SINGLE_USER_START})
 
-  const usersOrders = get_All_Orders.orders
-  console.log(usersOrders);
+  // const usersOrders = get_All_Orders.orders
+  // console.log(usersOrders);
   
   try {
 
@@ -497,8 +497,6 @@ useEffect(()=>{
 
 useEffect(() => {
     fetchProducts()
-    // getPayments()
-    // users()
 }, [])
 
 
