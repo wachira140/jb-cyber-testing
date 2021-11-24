@@ -147,7 +147,7 @@ export const AdminProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
     const [isNew, setIsNew] = useState(false);
 
-const { get_All_Orders } = useOrdersContext()
+
 
 
     // admin sidebar
