@@ -53,6 +53,7 @@ if(user.login_Status){
                         name="email"
                         onChange={fetchLoginDetails}
                         value={email}
+                        autoComplete="off"
                         placeholder="enter@email.com" />
                     </div>
                     <div className="password login">
@@ -61,6 +62,7 @@ if(user.login_Status){
                          name="password"
                          onChange={fetchLoginDetails}
                          value={password}
+                         autoComplete="off"
                          placeholder="enter password"/>
                     </div>
                     <button 
