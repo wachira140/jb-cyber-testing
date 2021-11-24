@@ -1,6 +1,5 @@
 import React, { useEffect,useState, useContext, useReducer } from 'react'
 import reducer from '../reducer/adminReducer'
-import { useOrdersContext } from './ordersContext'
 import axios from 'axios'
 import {
   
@@ -137,8 +136,6 @@ const initialState = {
 
 }
 
-// const url = "https://cyber-api-v1.herokuapp.com/api/v1"
-// const url ="/api/v1"
 
 const adminContext = React.createContext()
 
@@ -472,14 +469,10 @@ const getUsers = async()=>{
 const  getSingleUser = async(id)=>{
   dispatch({type:GET_SINGLE_USER_START})
 
-  // const usersOrders = get_All_Orders.orders
-  // console.log(usersOrders);
+  
   
   try {
 
-    // const { data } = await axios.get(`${url}/users/${id}`)
-    
-    
     dispatch({type:GET_SINGLE_USER_SUCCESS})
   } catch (error) {
     dispatch({type:GET_SINGLE_USER_ERROR})
