@@ -17,7 +17,7 @@ const { isSidebarOpen, closeSidebar, } = useProductContext()
                     <button className="icon close-btn" onClick={closeSidebar}><ImCross/></button>
                 </div>
                 <div className="categories-container">
-                    <h4 className='category-title'>our categories</h4>
+                    <h4 className='category-title'>navigate</h4>
 
                        <Links />
                         
