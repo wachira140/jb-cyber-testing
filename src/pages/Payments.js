@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import { FaSpinner, FaTrash} from 'react-icons/fa'
 import { GrFormView } from 'react-icons/gr'
 import { useAdminContext } from '../context/adminContext'
+import { useAuthContext } from '../context/authContext'
 
 const Payments = () => {
 
@@ -18,12 +19,12 @@ const Payments = () => {
         } = useAdminContext()
     const { filter_payment, error, msg, } = payments
 
+const { user } = useAuthContext()
 
 
 
 
-
-    if(loading){
+    if(loading && user.loading){
     return(
         <Wrapper>
             <div className='center'>
