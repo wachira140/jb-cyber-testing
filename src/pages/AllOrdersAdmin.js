@@ -29,7 +29,7 @@ useEffect(()=>{
 },[])
 
 
-if(loading){
+if(loading || !orders){
     return(
         <Wrapper>
             <div className='center'>
