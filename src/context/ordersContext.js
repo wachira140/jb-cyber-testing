@@ -210,9 +210,8 @@ const currentOrders = async()=>{
         dispatch({type:SINGLE_ORDER_START})
         
         try {
-            const response = await axios.get(`api/v1/orders/${id}`)
+            const response = await axios.get(`https://cyber-api-v1.herokuapp.com/api/v1/orders/${id}`)
             const { order } = response.data
-            console.log(order);
             dispatch({type:SINGLE_ORDER_SUCCESS, payload: order})
         } catch (error) {
             dispatch({type:SINGLE_ORDER_ERROR})
