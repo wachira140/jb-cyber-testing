@@ -82,7 +82,7 @@ if(delete_Order.error){
 if(orders.length < 1){
     return(
          <Wrapper>
-            <div className="center empty">
+            <div className="empty">
             <h4>no orders</h4>
                 <h5>you're not doing enough</h5>
             </div>

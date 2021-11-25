@@ -36,7 +36,7 @@ if(error){
 if(products.length < 1){
     return(
          <Wrapper>
-            <div className="center empty">
+            <div className="empty">
             <h4>no products</h4>
                 <h5>the store is empty!!</h5>
             </div>
