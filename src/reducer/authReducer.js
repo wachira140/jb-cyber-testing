@@ -271,7 +271,6 @@ if(action.type === NEW_PASSWORD_SUCCESS){
        
         return {
             ...state,
-            load_On_Login:false,
             login_Success:true,
         }
     }
@@ -353,6 +352,7 @@ if(action.type ===  SET_USER){
     const { name, role, userId} = action.payload
     return {
         ...state,
+        load_On_Login:false,
         user:{
             ...state.user,
             name,
