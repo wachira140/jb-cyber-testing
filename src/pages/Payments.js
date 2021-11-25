@@ -23,6 +23,7 @@ const Payments = () => {
 
     useEffect(()=>{
          getPayments()
+         // eslint-disable-next-line 
     },[])
 
 
