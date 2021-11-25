@@ -4,12 +4,12 @@ import { useAuthContext } from '../context/authContext'
 import { FaSpinner } from 'react-icons/fa'
 
 const AuthWrapper = ({children}) => {
-    const { user} = useAuthContext()
+    const { user, login_Success} = useAuthContext()
 
 
 
 
-    if(user.loading){
+    if(login_Success && user.loading){
         return(
             
         <Wrapper>
