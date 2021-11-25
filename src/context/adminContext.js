@@ -119,7 +119,7 @@ const initialState = {
     all_users:[],
     filter_users:[],
     success:false,
-    loading:'true',
+    loading:true,
     error:false,
     msg:'',
   },
