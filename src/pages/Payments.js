@@ -15,8 +15,9 @@ const Payments = () => {
            resetPaymentError,
            setTableFilters,
            receipt,
+           loading
         } = useAdminContext()
-    const { filter_payment, loading, error, msg, } = payments
+    const { filter_payment, error, msg, } = payments
 
 
 
