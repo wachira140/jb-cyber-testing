@@ -301,9 +301,10 @@ useEffect(() => {
 
 
 useEffect(() => {
-    if(state.login_Success && !state.load_On_Login){
-        showUser()
-    }
+    // if(state.login_Success && !state.load_On_Login){
+    //     showUser()
+    // }
+    showUser()
     // eslint-disable-next-line 
 }, [])
 
