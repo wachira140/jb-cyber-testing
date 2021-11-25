@@ -391,8 +391,8 @@ if(action.type === GET_PAYMENTS_SUCCESS){
             loading:false,
             success:true,
             msg:'payments loaded successfully',
-            all_payments:[...action.payload],
-            filter_payment:[...action.payload],
+            all_payments:action.payload,
+            filter_payment:action.payload,
         }
     }
 }
