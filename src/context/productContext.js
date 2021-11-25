@@ -58,7 +58,7 @@ const [isLocation, setLocation ] = useState({})
 const fetchMainProducts = async ()=>{
   dispatch({type:GET_PRODUCTS_BEGIN})
   try {
-    const response = await axios.get(`api/v1/products`);
+    const response = await axios.get(`/api/v1/products`);
     const products = response.data.products
     dispatch({type:GET_PRODUCTS, payload:products})
     
