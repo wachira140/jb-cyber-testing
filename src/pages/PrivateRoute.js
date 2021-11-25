@@ -4,8 +4,8 @@ import { useAuthContext } from '../context/authContext'
 
 
 const PrivateRoute = ({children, ...rest}) => {
-    const { user, load_On_Login } = useAuthContext()
-const { login_Status } = user
+    const { user } = useAuthContext()
+const { login_Status, loading } = user
 
 
 
@@ -13,7 +13,7 @@ const { login_Status } = user
         <Route 
         {...rest}
         render={()=>{
-            return login_Status && !load_On_Login ? children : <Redirect to='/'></Redirect>
+            return login_Status && !loading ? children : <Redirect to='/'></Redirect>
         }}></Route>
     )
 }

@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 import { useAuthContext } from '../context/authContext'
 
 const PrivateAdminRoute = ({children, ...rest}) => {
-     const { user , load_On_Login} = useAuthContext()
+     const { user } = useAuthContext()
     const { login_Status, role } = user
 
 
@@ -11,7 +11,7 @@ const PrivateAdminRoute = ({children, ...rest}) => {
         <Route 
         {...rest}
         render={()=>{
-            return login_Status && role === 'admin' && !load_On_Login ? children : <Redirect to='/'></Redirect>
+            return login_Status && role === 'admin' ? children : <Redirect to='/'></Redirect>
         }}></Route>
     )
 }
