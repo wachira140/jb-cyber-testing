@@ -212,6 +212,7 @@ const currentOrders = async()=>{
         try {
             const response = await axios.get(`api/v1/orders/${id}`)
             const { order } = response.data
+            console.log(response);
             dispatch({type:SINGLE_ORDER_SUCCESS, payload: order})
         } catch (error) {
             dispatch({type:SINGLE_ORDER_ERROR})
