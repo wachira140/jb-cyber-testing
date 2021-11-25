@@ -22,6 +22,10 @@ const AllOrdersAdmin = () => {
         } = get_All_Orders
 
 
+        useEffect(() => {
+            getOrders()
+         // eslint-disable-next-line 
+        }, [])
 
 
 if(loading){
@@ -85,9 +89,7 @@ if(orders.length < 1){
     )
 }
 
-useEffect(() => {
-    getOrders()
-}, [])
+
 
     return (
          <Wrapper>
