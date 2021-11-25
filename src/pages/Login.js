@@ -14,14 +14,14 @@ const Login = () => {
          login,
          load_On_Login, 
         loginUser,
-        user,
+        login_Success,
         isLoginError,
         resetLogin,
      } = useAuthContext()
     const { email, password } = login
 
 
-if(user.login_Status){
+if(login_Success){
     return <Redirect to ='/' />
 }
 
