@@ -78,17 +78,6 @@ if(delete_Order.error){
 
 
 
-if(orders.length < 1){
-    return(
-         <Wrapper>
-            <div className="empty">
-            <h4>no orders</h4>
-                <h5>you're not doing enough</h5>
-            </div>
-        </Wrapper>
-    )
-}
-
 
 
     return (
@@ -97,6 +86,12 @@ if(orders.length < 1){
                 <h5>({orders.length}) orders</h5>
             </div>
             <div className ='body'>
+                  {
+                    orders.length < 1 && <div className="empty">
+                            <h4>no payments</h4>
+                                <h5>bad for business</h5>
+                            </div>
+                }
                 <table className='table section-center'>
                 <thead>
 
