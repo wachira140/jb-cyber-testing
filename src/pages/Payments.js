@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 import { FaSpinner, FaTrash} from 'react-icons/fa'
 import { GrFormView } from 'react-icons/gr'
 import { useAdminContext } from '../context/adminContext'
-import { useAuthContext } from '../context/authContext'
 
 const Payments = () => {
 

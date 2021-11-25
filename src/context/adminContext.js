@@ -182,7 +182,6 @@ const deleteProduct = async(id)=>{
            fetchProducts()
         dispatch({type: DELETE_PRODUCT_SUCCESS})
     } catch (error) {
-        console.log(error);
         dispatch({type: DELETE_PRODUCT_ERROR})
     }
 }
@@ -279,7 +278,6 @@ const handleSubmit = async (e)=>{
         dispatch({type:SUBMIT_SUCCESS})
   } catch (error) {
     dispatch({type:SUBMIT_ERROR})
-    console.log(error);
   
   }
 }
@@ -386,7 +384,7 @@ const getPayments = async()=>{
 
   try {
       const { data } = await axios.get(`api/v1/payments`)
-      console.log(data);
+      
       dispatch({type:GET_PAYMENTS_SUCCESS, payload:data.payments})
       
   } catch (error) {
