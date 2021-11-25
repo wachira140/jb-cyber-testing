@@ -24,7 +24,7 @@ const { user } = useAuthContext()
 
 
 
-    if(loading && user.loading){
+    if(loading){
     return(
         <Wrapper>
             <div className='center'>
