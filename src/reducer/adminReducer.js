@@ -392,8 +392,8 @@ if(action.type === GET_PAYMENTS_SUCCESS){
             loading:false,
             success:true,
             msg:'payments loaded successfully',
-            all_payments:payments,
-            filter_payment:payments,
+            all_payments:[...payments],
+            filter_payment:[...payments],
             count,
         }
     }
