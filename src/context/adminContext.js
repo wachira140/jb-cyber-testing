@@ -159,7 +159,7 @@ const closeSidebar = ()=>{
   const fetchProducts = async ()=>{
   dispatch({type:DASHBOARD_PRODUCTS_START})
   try {
-    const response = await axios.get(`api/v1/products`);
+    const response = await axios.get(`/api/v1/products`);
     const products = response.data.products
     dispatch({type:DASHBOARD_PRODUCTS_SUCCESS, payload:products})
     
@@ -178,7 +178,7 @@ const deleteProduct = async(id)=>{
     dispatch({type: DELETE_PRODUCT_START})
 
     try {
-            await axios.delete(`api/v1/products/${id}`)
+            await axios.delete(`/api/v1/products/${id}`)
            fetchProducts()
         dispatch({type: DELETE_PRODUCT_SUCCESS})
     } catch (error) {
@@ -273,7 +273,7 @@ const handleSubmit = async (e)=>{
                 image,
                 image_id
                    }
-             await axios.post(`api/v1/products`, product)
+             await axios.post(`/api/v1/products`, product)
                    fetchProducts()
         dispatch({type:SUBMIT_SUCCESS})
   } catch (error) {
@@ -316,7 +316,7 @@ const setEditValues = async (e)=>{
     
   try {
     // *************upload image if changed
-    const {data:{image:{src, public_id}}} = await axios.post(`api/v1/products/uploads`,imageData)
+    const {data:{image:{src, public_id}}} = await axios.post(`/api/v1/products/uploads`,imageData)
     dispatch({type:SET_EDIT_PRODUCT, payload:{value:{src, public_id} }})
   
   } catch (error) {
@@ -369,7 +369,7 @@ dispatch({type:EDIT_SUBMIT_START})
                    }
 
         
-        await axios.patch(`api/v1/products/${_id}`, product)
+        await axios.patch(`/api/v1/products/${_id}`, product)
         fetchProducts()
        dispatch({type:EDIT_SUBMIT_SUCCESS})
   } catch (error) {
@@ -383,7 +383,7 @@ const getPayments = async()=>{
   dispatch({type:GET_PAYMENTS_START})
 
   try {
-      const { data } = await axios.get(`api/v1/payments`)
+      const { data } = await axios.get(`/api/v1/payments`)
       
       dispatch({type:GET_PAYMENTS_SUCCESS, payload:data.payments})
       
@@ -400,7 +400,7 @@ const delete_Payment = async(id)=>{
 
   try {
     
-    await axios.delete(`api/v1/payments/${id}`)
+    await axios.delete(`/api/v1/payments/${id}`)
     getPayments()
     dispatch({type: DELETE_PAYMENT_SUCCESS})
   } catch (error) {
@@ -452,7 +452,7 @@ const getUsers = async()=>{
   dispatch({type:GET_USERS_START})
 
   try {
-      const { data } = await axios.get(`api/v1/users`)
+      const { data } = await axios.get(`/api/v1/users`)
 
       dispatch({type: GET_USERS_SUCCESS, payload:data.users})
   } catch (error) {

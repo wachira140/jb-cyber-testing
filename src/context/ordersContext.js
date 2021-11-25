@@ -154,7 +154,7 @@ const submitOrder = async()=>{
             };
             
             try {
-                const response = await axios.post(`api/v1/orders`, orderDetails)
+                const response = await axios.post(`/api/v1/orders`, orderDetails)
                 const{ _id } = response.data.order
                 currentOrders()
                 dispatch({type:SUBMIT_ORDER_SUCCESS, payload:_id})
@@ -171,7 +171,7 @@ const submitOrder = async()=>{
         dispatch({type:GET_ALL_ORDERS})
 
         try {
-                const response = await axios.get(`api/v1/orders`)
+                const response = await axios.get(`/api/v1/orders`)
                 const { data }= response
                 dispatch({type:GET_ALL_ORDERS_SUCCESS, payload:data})
         } catch (error) {
@@ -186,7 +186,7 @@ const submitOrder = async()=>{
 const currentOrders = async()=>{
     dispatch({type:CURRENT_ORDERS_START})
     try {
-        const response = await axios.get(`api/v1/orders/showUsersOrders`)
+        const response = await axios.get(`/api/v1/orders/showUsersOrders`)
         
         const {orders} = response.data
             dispatch({type:CURRENT_ORDERS_SUCCESS,payload:orders})
@@ -212,7 +212,6 @@ const currentOrders = async()=>{
         try {
             const response = await axios.get(`/api/v1/orders/${id}`)
             const { order } = response.data
-            console.log(response);
             dispatch({type:SINGLE_ORDER_SUCCESS, payload: order})
         } catch (error) {
             dispatch({type:SINGLE_ORDER_ERROR})
@@ -257,7 +256,7 @@ const currentOrders = async()=>{
         
         try {
             
-            await axios.post(`api/v1/mpesa/lipaNaMpesa`, {phoneNumber, orderId})
+            await axios.post(`/api/v1/mpesa/lipaNaMpesa`, {phoneNumber, orderId})
             dispatch({type:PAY_MPESA_SUCCESS})
         } catch (error) {
             dispatch({type:PAY_MPESA_ERROR})

@@ -240,7 +240,7 @@ const  logOut = async()=>{
 
     try {
 
-    await axios.delete(`api/v1/auth/logout`)
+    await axios.delete(`/api/v1/auth/logout`)
         // showUser()
         dispatch({type: LOGOUT_SUCCESS})
     } catch (error) {
@@ -279,7 +279,7 @@ const resetForgotDetails = ()=>{
   const showUser = async ()=>{
       dispatch({type:SET_USER_START})
   try {
-    const response = await axios.get(`api/v1/users/showUser`);
+    const response = await axios.get(`/api/v1/users/showUser`);
     const data = response.data.user
     dispatch({type:SET_USER, payload:data})
   } catch (error) {

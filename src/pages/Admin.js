@@ -3,7 +3,6 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import { CgMenuGridO } from 'react-icons/cg'
 import { useAdminContext } from '../context/adminContext'
-import { useOrdersContext } from '../context/ordersContext'
 import {
     AddProduct,
     Manage,
@@ -25,22 +24,11 @@ const Admin = () => {
     const {  
         openSidebar, 
         isSidebarOpen,
-         getPayments,
-         getUsers,
          
         } = useAdminContext()
 
 
-        const {  getOrders } = useOrdersContext()
 
-
-
-    useEffect(() => {
-       getPayments()
-        getOrders()
-        getUsers()
-    // eslint-disable-next-line 
-    }, [])
 
     return (
         <Wrapper className = 'col-lg-10  mx-auto'>

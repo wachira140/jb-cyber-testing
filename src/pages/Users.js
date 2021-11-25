@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaSpinner, FaUser } from 'react-icons/fa'
@@ -11,14 +11,17 @@ const Users = () => {
     const {
          users,
           setTableFilters,
-           email
+           email,
+            getUsers
          } = useAdminContext()
 
 
     const {filter_users, loading, error, msg } = users
 
 
-
+useEffect(() => {
+    getUsers()
+}, [])
 
 
   if(loading){
