@@ -387,6 +387,7 @@ const getPayments = async()=>{
 
   try {
       const { data } = await axios.get(`api/v1/payments`)
+      console.log(data);
       dispatch({type:GET_PAYMENTS_SUCCESS, payload:data})
       
   } catch (error) {
@@ -490,7 +491,7 @@ useEffect(()=>{
 
 useEffect(() => {
     fetchProducts()
-    getPayments()
+    // getPayments()
 }, [])
 
 
