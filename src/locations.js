@@ -22,19 +22,19 @@ export const nairobi = [
         cost:[
             {
                 classification:'a',
-                price:50
+                price:10
             },
             {
                 classification:'b',
-                price:120
+                price:20
             },
             {
                 classification:'c',
-                price:150
+                price:15
             },
             {
                 classification:'d',
-                price:3000
+                price:30
             },
         ],
         leadTime:"2 days",
@@ -51,19 +51,19 @@ export const nairobi = [
         cost:[
             {
                 classification:'a',
-                price:100
+                price:11
             },
             {
                 classification:'b',
-                price:150
+                price:12
             },
             {
                 classification:'c',
-                price:500
+                price:17
             },
             {
                 classification:'d',
-                price:1000
+                price:25
             },
         ],
         pickup:[
@@ -79,19 +79,19 @@ export const nairobi = [
         cost:[
             {
                 classification:'a',
-                price:50
+                price:23
             },
             {
                 classification:'b',
-                price:100
+                price:27
             },
             {
                 classification:'c',
-                price:300
+                price:29
             },
             {
                 classification:'d',
-                price:450
+                price:120
             },
         ],
         leadTime:"4 days",
@@ -106,19 +106,19 @@ export const nairobi = [
         cost:[
             {
                 classification:'a',
-                price:70
+                price:10
             },
             {
                 classification:'b',
-                price:190
+                price:14
             },
             {
                 classification:'c',
-                price:200
+                price:16
             },
             {
                 classification:'d',
-                price:350
+                price:25
             },
         ],
         leadTime:"4 days",
@@ -139,19 +139,19 @@ export const nyeri = [
         cost:[
             {
                 classification:'a',
-                price:100
+                price:11
             },
             {
                 classification:'b',
-                price:150
+                price:15
             },
             {
                 classification:'c',
-                price:500
+                price:20
             },
             {
                 classification:'d',
-                price:1000
+                price:25
             },
         ],
         leadTime:"2 days",
@@ -164,19 +164,19 @@ export const nyeri = [
         cost:[
             {
                 classification:'a',
-                price:150
+                price:20
             },
             {
                 classification:'b',
-                price:250
+                price:24
             },
             {
                 classification:'c',
-                price:500
+                price:26
             },
             {
                 classification:'d',
-                price:600
+                price:30
             },
         ],
         leadTime:"3 days",
@@ -192,19 +192,19 @@ export const nyeri = [
        cost:[
             {
                 classification:'a',
-                price:150
+                price:100
             },
             {
                 classification:'b',
-                price:195
+                price:120
             },
             {
                 classification:'c',
-                price:245
+                price:130
             },
             {
                 classification:'d',
-                price:700
+                price:150
             },
         ],
         leadTime:"2 days",
@@ -224,15 +224,15 @@ export const nyeri = [
             },
             {
                 classification:'b',
-                price:150
+                price:75
             },
             {
                 classification:'c',
-                price:400
+                price:90
             },
             {
                 classification:'d',
-                price:550
+                price:110
             },
         ],
         leadTime:"4 days",
@@ -247,19 +247,19 @@ export const nyeri = [
         cost:[
             {
                 classification:'a',
-                price:200
+                price:110
             },
             {
                 classification:'b',
-                price:350
+                price:120
             },
             {
                 classification:'c',
-                price:450
+                price:150
             },
             {
                 classification:'d',
-                price:800
+                price:175
             },
         ],
         leadTime:"1 days",
@@ -274,19 +274,19 @@ export const kisumu = [
         cost:[
             {
                 classification:'a',
-                price:550
+                price:120
             },
             {
                 classification:'b',
-                price:700
+                price:125
             },
             {
                 classification:'c',
-                price:950
+                price:175
             },
             {
                 classification:'d',
-                price:1200
+                price:180
             },
         ],
         leadTime:"2 days",
@@ -299,19 +299,19 @@ export const kisumu = [
         cost:[
             {
                 classification:'a',
-                price:500
+                price:10
             },
             {
                 classification:'b',
-                price:650
+                price:15
             },
             {
                 classification:'c',
-                price:750
+                price:20
             },
             {
                 classification:'d',
-                price:1000
+                price:25
             },
         ],
         leadTime:"3 days",
@@ -327,19 +327,19 @@ export const kisumu = [
        cost:[
             {
                 classification:'a',
-                price:600
+                price:12
             },
             {
                 classification:'b',
-                price:700
+                price:14
             },
             {
                 classification:'c',
-                price:1200
+                price:15
             },
             {
                 classification:'d',
-                price:1500
+                price:20
             },
         ],
         leadTime:"2 days",
@@ -383,19 +383,19 @@ export const mombasa = [
         cost:[
             {
                 classification:'a',
-                price:670
+                price:12
             },
             {
                 classification:'b',
-                price:860
+                price:15
             },
             {
                 classification:'c',
-                price:880
+                price:20
             },
             {
                 classification:'d',
-                price:1600
+                price:22
             },
         ],
         leadTime:"4 days",
@@ -411,19 +411,19 @@ export const mombasa = [
         cost:[
             {
                 classification:'a',
-                price:600
+                price:10
             },
             {
                 classification:'b',
-                price:1150
+                price:13
             },
             {
                 classification:'c',
-                price:1400
+                price:14
             },
             {
                 classification:'d',
-                price:550
+                price:16
             },
         ],
         leadTime:"4 days",
@@ -439,19 +439,19 @@ export const mombasa = [
         cost:[
             {
                 classification:'a',
-                price:450
+                price:5
             },
             {
                 classification:'b',
-                price:550
+                price:10
             },
             {
                 classification:'c',
-                price:750
+                price:13
             },
             {
                 classification:'d',
-                price:1800
+                price:17
             },
         ],
         leadTime:"1 days",
