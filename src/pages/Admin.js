@@ -27,6 +27,7 @@ const Admin = () => {
 
     useEffect(() => {
        getPayments()
+    // eslint-disable-next-line 
     }, [])
 
     return (

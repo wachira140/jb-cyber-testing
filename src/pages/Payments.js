@@ -8,7 +8,6 @@ import { useAdminContext } from '../context/adminContext'
 const Payments = () => {
 
     const {
-        // getPayments,
          payments, 
           delete_Payment,
            delete_payment,
@@ -22,10 +21,6 @@ const Payments = () => {
 
 
 
-// useEffect(()=>{
-//     getPayments()
-//      // eslint-disable-next-line 
-// },[])
 
 
     if(loading){
