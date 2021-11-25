@@ -72,7 +72,7 @@ const fetchMainProducts = async ()=>{
 const fetchSingleProducts = async (id)=>{
   dispatch({type:GET_SINGLE_PRODUCTS_BEGIN})
   try {
-    const response = await axios.get(`api/v1/products/${id}`);
+    const response = await axios.get(`/api/v1/products/${id}`);
      const product = response.data.product
     dispatch({type: GET_SINGLE_PRODUCT, payload:product})
     
