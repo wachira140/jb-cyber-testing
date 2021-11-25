@@ -301,7 +301,7 @@ useEffect(() => {
 
 
 useEffect(() => {
-    if(state.login_Success && !state. load_On_Login){
+    if(state.login_Success && !state.load_On_Login){
         showUser()
     }
 }, [state.login_Success])
