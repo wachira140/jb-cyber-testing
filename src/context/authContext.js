@@ -79,7 +79,7 @@ const initialState = {
         role:null,
         userId:null,
         login_Status:false,
-        loading:false,
+        loading:true,
     },
 
     reset:{
@@ -301,7 +301,7 @@ useEffect(() => {
 
 
 useEffect(() => {
-    if(state.login_Success && !state.user.loading){
+    if(state.login_Success){
         showUser()
     }
     
