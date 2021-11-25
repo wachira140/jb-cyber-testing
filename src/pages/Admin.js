@@ -24,14 +24,14 @@ const Admin = () => {
     const {  
         openSidebar, 
         isSidebarOpen,
-         getPayments,
+        //  getPayments,
           getOrders,
         } = useAdminContext()
 
 
 
     useEffect(() => {
-       getPayments()
+    //    getPayments()
         getOrders()
     // eslint-disable-next-line 
     }, [])
