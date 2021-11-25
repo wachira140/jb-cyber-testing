@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import { CgMenuGridO } from 'react-icons/cg'
