@@ -88,7 +88,7 @@ if(delete_Order.error){
             <div className ='body'>
                   {
                     orders.length < 1 && <div className="empty">
-                            <h4>no payments</h4>
+                            <h4>no orders</h4>
                                 <h5>bad for business</h5>
                             </div>
                 }
