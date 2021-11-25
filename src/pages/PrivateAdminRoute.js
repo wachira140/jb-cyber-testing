@@ -11,7 +11,7 @@ const PrivateAdminRoute = ({children, ...rest}) => {
         <Route 
         {...rest}
         render={()=>{
-            return login_Status && role === 'admin' && load_On_Login ? children : <Redirect to='/'></Redirect>
+            return login_Status && role === 'admin' && !load_On_Login ? children : <Redirect to='/'></Redirect>
         }}></Route>
     )
 }
