@@ -138,11 +138,20 @@ svg{
     color:red;
 }
 
-.empty{
-    flex-direction:column;
-    padding:0 2rem;
-    text-align:center;
-    color: red;
+ .empty{
+ position:absolute;
+box-shadow: var(--dark-shadow);
+left:50%;
+top:0;
+transform:translateX(-50%);
+height:100vh;
+width:100%;
+padding:1rem 0;
+color:red;
+display:flex;
+justify-content:center;
+flex-direction:column;
+align-items:center;
     h5{
         color: var(--clr-green-dark);
     }
