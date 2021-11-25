@@ -3,6 +3,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import { CgMenuGridO } from 'react-icons/cg'
 import { useAdminContext } from '../context/adminContext'
+import { useOrdersContext } from '../context/ordersContext'
 import {
     AddProduct,
     Manage,
@@ -24,14 +25,17 @@ const Admin = () => {
     const {  
         openSidebar, 
         isSidebarOpen,
-        //  getPayments,
-          getOrders,
+         getPayments,
+         
         } = useAdminContext()
+
+
+        const {  getOrders } = useOrdersContext()
 
 
 
     useEffect(() => {
-    //    getPayments()
+       getPayments()
         getOrders()
     // eslint-disable-next-line 
     }, [])
