@@ -21,10 +21,10 @@ const Payments = () => {
 
 
 
-useEffect(()=>{
-    getPayments()
-     // eslint-disable-next-line 
-},[])
+// useEffect(()=>{
+//     getPayments()
+//      // eslint-disable-next-line 
+// },[])
 
 
     if(loading){
