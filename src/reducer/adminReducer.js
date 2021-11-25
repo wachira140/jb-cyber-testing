@@ -384,7 +384,6 @@ if(action.type === GET_PAYMENTS_START){
 }
 
 if(action.type === GET_PAYMENTS_SUCCESS){
-    const { count, payments} = action.payload
     return {
         ...state,
         payments:{
@@ -392,9 +391,8 @@ if(action.type === GET_PAYMENTS_SUCCESS){
             loading:false,
             success:true,
             msg:'payments loaded successfully',
-            all_payments:[...payments],
-            filter_payment:[...payments],
-            count,
+            all_payments:[...action.payload],
+            filter_payment:[...action.payload],
         }
     }
 }

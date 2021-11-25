@@ -100,7 +100,6 @@ const initialState = {
   payments:{
     all_payments:[],
     filter_payment:[],
-    count:0,
     success:false,
     loading:false,
     error:false,
@@ -119,7 +118,7 @@ const initialState = {
     all_users:[],
     filter_users:[],
     success:false,
-    loading:true,
+    loading:false,
     error:false,
     msg:'',
   },
@@ -388,7 +387,7 @@ const getPayments = async()=>{
   try {
       const { data } = await axios.get(`api/v1/payments`)
       console.log(data);
-      dispatch({type:GET_PAYMENTS_SUCCESS, payload:data})
+      dispatch({type:GET_PAYMENTS_SUCCESS, payload:data.payments})
       
   } catch (error) {
     dispatch({type:GET_PAYMENTS_ERROR})
