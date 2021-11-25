@@ -275,7 +275,7 @@ const handleSubmit = async (e)=>{
                 image,
                 image_id
                    }
-             await axios.post(`https://cyber-api-v1.herokuapp.com/api/v1/products`, product)
+             await axios.post(`api/v1/products`, product)
                    fetchProducts()
         dispatch({type:SUBMIT_SUCCESS})
   } catch (error) {
