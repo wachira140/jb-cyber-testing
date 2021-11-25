@@ -28,7 +28,7 @@ const Payments = () => {
 
 
 
-    if(loading){
+    if(payments.loading){
     return(
         <Wrapper>
             <div className='center'>
