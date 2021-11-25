@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import { FaTrash, FaSpinner } from 'react-icons/fa'
@@ -10,7 +10,8 @@ const AllOrdersAdmin = () => {
         get_All_Orders,
          deleteOrder, 
          delete_Order,
-          resetDeleteOrder
+          resetDeleteOrder,
+          getOrders,
         } = useOrdersContext()
     
     const { 
@@ -84,6 +85,9 @@ if(orders.length < 1){
     )
 }
 
+useEffect(() => {
+    getOrders()
+}, [])
 
     return (
          <Wrapper>
