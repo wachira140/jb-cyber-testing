@@ -226,7 +226,6 @@ const resetP = async(query)=>{
             })
         dispatch({type:NEW_PASSWORD_SUCCESS})
     } catch (error) {
-        console.log(error);
         dispatch({type:NEW_PASSWORD_ERROR})
     }
 }
@@ -306,7 +305,7 @@ useEffect(() => {
     }
     
     // eslint-disable-next-line 
-}, [])
+}, [state.login_Success])
 
 
 
