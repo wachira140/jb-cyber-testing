@@ -33,10 +33,9 @@ const Navbar = () => {
 
     const {
          logOut, 
-          user, 
+          login_Success
          }  = useAuthContext()
 
-    const { login_Status } = user
     
     const location = useLocation()
     
@@ -102,20 +101,18 @@ useEffect(() => {
 
                 <div className="nav-right center d-flex">
                     
-                        { !login_Status && <Link to='/login'> <div className=" nav-icon icon logedout ">
-                            <MdAccountCircle/>
-                            <span>login</span>
-                        </div>
-                         </Link> }
-                        
-                    
-                    { login_Status &&
+                    { login_Success ?
                         <div 
                         className=" nav-icon icon logedin"
                         onClick={logOut}>
                             <MdAccountCircle/>
                             <span>logout</span>
-                        </div>  
+                        </div>  : 
+                        !login_Success && <Link to='/login'> <div className=" nav-icon icon logedout ">
+                            <MdAccountCircle/>
+                            <span>login</span>
+                        </div>
+                         </Link>
                        }
                     
                         <div className=" nav-icon icon " >
