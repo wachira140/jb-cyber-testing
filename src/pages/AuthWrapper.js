@@ -9,24 +9,16 @@ const AuthWrapper = ({children}) => {
 
 
 
-    if(login_Success){
+    if(user.loading && login_Success){
+        return(
+            
+        <Wrapper>
+        <FaSpinner className='icon spinner'/>
+    </Wrapper>
 
-        if(user.loading){
-            return(
-                
-            <Wrapper>
-            <FaSpinner className='icon spinner'/>
-        </Wrapper>
-
-    )
-    } else{
-        return (
-        <>
-          {children}  
-        </>
-    )
-    }
-    }
+)
+} 
+    
 
     return (
         <>
