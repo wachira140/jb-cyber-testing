@@ -21,12 +21,18 @@ const Admin = () => {
 
     const { path, url }=useRouteMatch()
 
-    const {  openSidebar, isSidebarOpen, getPayments } = useAdminContext()
+    const {  
+        openSidebar, 
+        isSidebarOpen,
+         getPayments,
+          getOrders,
+        } = useAdminContext()
 
 
 
     useEffect(() => {
        getPayments()
+        getOrders()
     // eslint-disable-next-line 
     }, [])
 

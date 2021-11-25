@@ -1,4 +1,4 @@
-import React ,{useEffect}from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import { FaTrash, FaSpinner } from 'react-icons/fa'
@@ -7,7 +7,6 @@ import { useOrdersContext } from '../context/ordersContext'
 
 const AllOrdersAdmin = () => {
     const { 
-        getOrders,
         get_All_Orders,
          deleteOrder, 
          delete_Order,
@@ -23,13 +22,8 @@ const AllOrdersAdmin = () => {
 
 
 
-useEffect(()=>{
-    getOrders()
-     // eslint-disable-next-line 
-},[])
 
-
-if(loading || !orders){
+if(loading){
     return(
         <Wrapper>
             <div className='center'>
@@ -40,7 +34,7 @@ if(loading || !orders){
 }
 
 
-if(error){
+if(error  || !orders){
     return(
         <Wrapper>
             <div className='center error'>
