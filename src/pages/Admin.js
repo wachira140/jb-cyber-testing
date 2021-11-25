@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import { CgMenuGridO } from 'react-icons/cg'
@@ -21,8 +21,13 @@ const Admin = () => {
 
     const { path, url }=useRouteMatch()
 
-    const {  openSidebar, isSidebarOpen } = useAdminContext()
+    const {  openSidebar, isSidebarOpen, getPayments } = useAdminContext()
 
+
+
+    useEffect(() => {
+       getPayments()
+    }, [])
 
     return (
         <Wrapper className = 'col-lg-10  mx-auto'>
