@@ -19,7 +19,7 @@ const Payments = () => {
         } = useAdminContext()
     const { filter_payment, error, msg, } = payments
 
-const { user } = useAuthContext()
+
 
 
 
