@@ -210,7 +210,7 @@ const currentOrders = async()=>{
         dispatch({type:SINGLE_ORDER_START})
         
         try {
-            const response = await axios.get(`api/v1/orders/${id}`)
+            const response = await axios.get(`/api/v1/orders/${id}`)
             const { order } = response.data
             console.log(response);
             dispatch({type:SINGLE_ORDER_SUCCESS, payload: order})
@@ -223,7 +223,7 @@ const currentOrders = async()=>{
         dispatch({type:DELETE_ORDER_START})
         
         try {
-            await axios.delete(`api/v1/orders/${id}`)
+            await axios.delete(`/api/v1/orders/${id}`)
             currentOrders()
             getOrders()
             dispatch({type:DELETE_ORDER_SUCCESS})
