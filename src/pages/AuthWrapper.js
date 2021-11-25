@@ -19,6 +19,12 @@ const AuthWrapper = ({children}) => {
         </Wrapper>
 
     )
+    } else{
+        return (
+        <>
+          {children}  
+        </>
+    )
     }
     }
 
