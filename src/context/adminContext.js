@@ -488,7 +488,6 @@ useEffect(()=>{
 
 useEffect(() => {
     fetchProducts()
-    // getPayments()
 }, [])
 
 

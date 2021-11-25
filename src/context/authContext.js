@@ -305,7 +305,7 @@ useEffect(() => {
         showUser()
     }
     // eslint-disable-next-line 
-}, [state.login_Success])
+}, [])
 
 
 
