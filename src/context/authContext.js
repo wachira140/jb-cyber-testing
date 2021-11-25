@@ -79,7 +79,7 @@ const initialState = {
         role:null,
         userId:null,
         login_Status:false,
-        loading:true,
+        loading:false,
     },
 
     reset:{
