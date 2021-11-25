@@ -26,6 +26,7 @@ const Admin = () => {
         openSidebar, 
         isSidebarOpen,
          getPayments,
+         getUsers,
          
         } = useAdminContext()
 
@@ -37,6 +38,7 @@ const Admin = () => {
     useEffect(() => {
        getPayments()
         getOrders()
+        getUsers()
     // eslint-disable-next-line 
     }, [])
 

@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaSpinner, FaUser } from 'react-icons/fa'
@@ -9,7 +9,6 @@ import { useAdminContext } from '../context/adminContext'
 const Users = () => {
 
     const {
-        getUsers,
          users,
           setTableFilters,
            email
@@ -19,11 +18,6 @@ const Users = () => {
     const {filter_users, loading, error, msg } = users
 
 
-
-    useEffect(() => {
-       getUsers()
-        // eslint-disable-next-line 
-    }, [])
 
 
 
