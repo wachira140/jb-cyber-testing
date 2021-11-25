@@ -215,6 +215,7 @@ background: var(--clr-white);
   font-size: 0.85rem;
   flex: 1 0 auto;
   color: var(--clr-grey-1);
+  width:180px;
 }
 .search-icon {
   font-size: 1.25rem;
