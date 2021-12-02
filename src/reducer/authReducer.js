@@ -367,6 +367,7 @@ if(action.type ===  SET_USER){
 if(action.type === SET_USER_DEFAULT){
     return{
         ...state,
+        login_Success:false,
         user:{
             name:null,
             email:null,
