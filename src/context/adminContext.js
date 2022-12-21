@@ -210,7 +210,7 @@ const  addItem = async (e)=>{
 
     
     try {
-    const {data:{image:{src, public_id}}} = await axios.post(`https://cyber-api-v1.herokuapp.com/api/v1/products/uploads`,imageData)
+    const {data:{image:{src, public_id}}} = await axios.post(`https://cyber-api-v1.cyclic.app/api/v1/products/uploads`,imageData)
     dispatch({type:SET_PRODUCT, payload:{value:{src, public_id} }})
   
   } catch (error) {

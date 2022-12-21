@@ -100,7 +100,7 @@ const initialState = {
 
 const ordersContext = React.createContext()
 
-// const url = "https://cyber-api-v1.herokuapp.com/api/v1"
+// const url = "https://cyber-api-v1.cyclic.app//api/v1"
 // const url = "/api/v1"
 
  export const OrdersProvider = ({children}) => {

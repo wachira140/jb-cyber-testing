@@ -1,3 +1,3 @@
-/api/*  https://cyber-api-v1.herokuapp.com/api/:splat  200
+/api/*  https://cyber-api-v1.cyclic.app/api/:splat  200
 
 /* /index.html 200
